@@ -31,7 +31,7 @@ getgenv().n7 = {
 }
 
 -- CAGE
-if workspace:FindFirstChild("Cage (nick7hub)") then workspace:FindFirstChild("Cage (HiraganaDev Hub)"):Destroy() end
+if workspace:FindFirstChild("Cage (HiraganaDev Hub)") then workspace:FindFirstChild("Cage (HiraganaDev Hub)"):Destroy() end
 local folder = Instance.new("Folder", workspace)
 folder.Name = "Cage (HiraganaDev Hub)"
 local _color = Color3.fromRGB(79, 79, 79)
