@@ -74,7 +74,7 @@ local library, imgui = loadstring(game:HttpGet("https://raw.githubusercontent.co
 
 local window = library:AddWindow("HiraganaDev Hub | Elevator", {
     main_color = Color3.fromRGB(255, 0, 0),
-    min_size = Vector2.new(170, 120),
+    min_size = Vector2.new(300, 150),
     toggle_key = Enum.KeyCode.RightShift,
     can_resize = true,
 })
