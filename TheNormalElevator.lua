@@ -4,19 +4,19 @@ local trigger = workspace.Lobby.Elevator.Trigger
 
 local GC = getconnections or get_signal_cons
 if GC then
-	for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
-		if v["Disable"] then
-			v["Disable"](v)
-		elseif v["Disconnect"] then
-			v["Disconnect"](v)
-		end
-	end
+    for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
+        if v["Disable"] then
+            v["Disable"](v)
+        elseif v["Disconnect"] then
+            v["Disconnect"](v)
+        end
+    end
 else
-	game.Players.LocalPlayer.Idled:Connect(function()
-		local VirtualUser = game:GetService("VirtualUser")
-		VirtualUser:CaptureController()
-		VirtualUser:ClickButton2(Vector2.new())
-	end)
+    game.Players.LocalPlayer.Idled:Connect(function()
+        local VirtualUser = game:GetService("VirtualUser")
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end)
 end
 
 function getRoot(char)
@@ -46,10 +46,10 @@ local ceiling = Instance.new("Part", folder)
 local parts = {floor,wall1,wall2,wall3,wall4,ceiling}
 --+ sum things
 for _,v in pairs(parts) do
-	v.Anchored = true
-	v.Transparency = 0.4
-	v.Color = _color
-	v.Name = "https://discord.gg/kaA6t4HvMV"
+    v.Anchored = true
+    v.Transparency = 0.4
+    v.Color = _color
+    v.Name = "https://discord.gg/kaA6t4HvMV"
 end
 --+ Position
 floor.Position = Vector3.new(0, 0, 0) + _offset
@@ -81,7 +81,7 @@ local window = library:AddWindow("HiraganaDev Hub | Elevator", {
 local main = window:AddTab("Main")
 
 main:AddSwitch("Autofarm", function(Value)
-	getgenv().n7.autofarm = Value
+    getgenv().n7.autofarm = Value
     if getgenv().n7.autofarm then
         if char and getRoot(char) then
             getRoot(char).CFrame = trigger.CFrame
@@ -95,8 +95,17 @@ main:AddSwitch("Autofarm", function(Value)
 end)
 
 main:AddButton("Destroy", function()
-	imgui:Destroy()
+    imgui:Destroy()
 end)
 
 main:Show()
+
+local discordTab = window:AddTab("Discord")
+discordTab:AddLabel("Dc : hiraganadev.1337")
+discordTab:AddLabel("Server : https://discord.gg/kaA6t4HvMV")
+discordTab:AddButton("Join Discord (Buggy)", function()
+    -- Mettez ici le code pour ouvrir le lien d'invitation Discord
+    print("Ouvrir le lien Discord")
+end)
+
 library:FormatWindows()
