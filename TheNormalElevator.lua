@@ -73,10 +73,10 @@ getgenv().n7.cage = CFrame.new(frame)
 local library, imgui = loadstring(game:HttpGet("https://raw.githubusercontent.com/WhateverNick7/roblox/main/imgui.lua"))()
 
 local window = library:AddWindow("HiraganaDev Hub | Elevator", {
-	main_color = Color3.fromRGB(41, 74, 122),
-	min_size = Vector2.new(170, 120),
-	toggle_key = Enum.KeyCode.RightShift,
-	can_resize = true,
+    main_color = Color3.fromRGB(255, 0, 0),
+    min_size = Vector2.new(170, 120),
+    toggle_key = Enum.KeyCode.RightShift,
+    can_resize = true,
 })
 local main = window:AddTab("Main")
 
